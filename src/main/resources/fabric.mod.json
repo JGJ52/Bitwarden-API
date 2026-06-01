@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "bitwardenapi",
+  "version": "${version}",
+  "name": "Bitwarden API",
+  "description": "",
+  "authors": ["JGJ52"],
+  "contact": {"Discord Server": "https://discord.gg/5pjP2DxQK8"},
+  "license": "GPL-3.0",
+  "icon": "assets/bitwardenapi/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "hu.jgj52.bitwardenapi.client.BitwardenApiClient"
+    ],
+    "main": [
+      "hu.jgj52.bitwardenapi.BitwardenApi"
+    ]
+  },
+  "mixins": [
+    "${mixins_file}"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": ">=${minecraft_version} <=${minecraft_higher_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/bitwarden-api"
+      },
+      "update_checker": true
+    }
+  }
+}
